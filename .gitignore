@@ -1,0 +1,18 @@
+# Image files
+*.jpg
+*.gif
+*.png
+*.ico
+
+# Audio files
+*.mp3
+
+# Photoshop files
+*.psd
+
+# Fonts
+*.eot
+*.svg
+*.ttf
+*.woff
+*.woff2
