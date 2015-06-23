@@ -1,0 +1,322 @@
+/*  _______________________________________
+
+    MENU BAR
+    _______________________________________  */
+
+#mgmenu1 {
+	z-index: 12;
+}
+
+/*  Mega Menu Bar */
+
+.nav {
+	
+}
+
+.mgmenu_container{
+	max-width: 62.5em;	
+	z-index:1000;
+	margin: auto;
+}
+
+.mgmenu {
+	font-family: 'Arial', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	list-style:none;
+	margin:0;
+	position:relative; /* For IE7 */
+	line-height:1;
+}
+	.mgmenu > li {
+	    float: left;
+	    margin: 0;
+	    padding-right: 12px;
+	    padding-left: 12px;
+	    -webkit-transition:background .3s;
+	    -moz-transition:background .3s;
+	    -o-transition:background .3s;
+	    -ms-transition:background .3s;
+	    transition:background .3s;    
+	}
+		.mgmenu > li:hover {
+			background-color:#860101;
+		}
+		.mgmenu > li > a,
+		.mgmenu > li > span {
+			display: block;
+			color:#ffffff;
+			text-shadow:1px 1px 1px #000000;
+			font-size: 1.39em;
+			font-family: 'badhousebold', cursive;
+			text-transform: uppercase;
+			outline:0;
+			padding:10px 0 10px 0;
+		}
+		.mgmenu > li > span:hover,
+		.mgmenu > li > a:hover,
+		.mgmenu > li > a:focus {
+			cursor:pointer;
+			color:#ffffff;
+			outline:none;
+		}
+		.mgmenu > li.right_item {
+			float:right;
+			margin-right:0;
+			padding-right: 0;
+		}
+		.mgmenu > li.right_item:hover {
+			background: transparent;
+		}
+
+		.mgmenu_container > .mgmenu > li.mgmenu_button,
+		.mgmenu_fixed > .mgmenu > li.mgmenu_button,
+		.mgmenu_footer > .mgmenu > li.mgmenu_button {
+			display: none;
+			cursor: pointer;
+			-webkit-transition: none;
+			-moz-transition: none;
+			-o-transition: none;
+			-ms-transition: none;
+			transition: none;
+			font-weight: bold;
+			background-color:transparent;
+			background-image:url("/img/toggle.png");
+			background-repeat: no-repeat;
+			background-position:96% 10px;
+			line-height:12px;
+			padding:14px 4% 14px 4%;
+			color:#ffffff;
+			text-shadow:1px 1px 1px #000000;
+		}
+		.mgmenu_container > .mgmenu > li.mgmenu_button_active,
+		.mgmenu_fixed > .mgmenu > li.mgmenu_button_active,
+		.mgmenu_footer > .mgmenu > li.mgmenu_button_active {
+			background-color:#000000;
+		}
+
+/*  _______________________________________
+
+    DROP DOWNS
+    _______________________________________  */
+
+/* Common Styling */
+
+.mgmenu li .dropdown_container {
+	position:absolute;
+	top:auto;
+	display: none;
+	float:left;
+	zoom:1;
+	z-index: 10;
+	margin:0px 0 15px -13px;
+	padding:5px 0 6px 0;
+	-webkit-border-radius:0 0 3px 3px;
+	-moz-border-radius:0 0 3px 3px;
+	border-radius:0 0 3px 3px;
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+	-o-box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+	box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+	border:1px solid #4c0101;
+	border-top:none;
+	background: #860101;
+	color: #ffffff;
+}
+
+.dropdown_container a {
+	font-size: 1.2em;
+	font-family: 'Special Elite', cursive;
+}
+
+/* IE dropdown top margin fix */
+
+@media all and (-ms-high-contrast:none)
+     {
+     .mgmenu li .dropdown_container {margin:-1px 0 15px -1px;} /* IE10 */
+     *::-ms-backdrop, .mgmenu li .dropdown_container {margin:-1px 0 15px -1px;} /* IE11 */
+     }
+
+.mgmenu li .dropdown_container {
+	left:auto;
+}
+
+/* Drop Down Containers */
+
+.mgmenu li .dropdown_3columns {
+	min-width: 220px;
+	padding-left: 15px;
+	padding-right: 15px%;
+}
+.mgmenu li .dropdown_4columns {
+	width: 33.3334%;
+	padding-left: 1.333%;
+	padding-right: 1.333%;
+}
+
+/*  _______________________________________
+
+    COLUMNS GRID
+    _______________________________________  */
+
+.mgmenu .col_12 {
+	float: left;
+	display:inline;
+	position: relative;
+	padding-left: 2%;
+	padding-right: 2%;
+	/* 
+	Rounding error with IE7.
+	Lower margin values will absorb the difference.
+	*/
+	*padding-left: 1.9%;
+	*padding-right: 1.9%;
+}
+
+.mgmenu .col_12 {width:96%;}
+
+/* Basic Typography */
+
+.mgmenu p,  
+.mgmenu h4, {
+	padding:0;
+	margin:0;
+	font-weight: normal;
+	color:#222222;
+	text-shadow:1px 1px 1px #ffffff;
+	margin-bottom:18px;
+} 
+.mgmenu h4, 
+{
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+.mgmenu p {
+	font-size:12px;
+}
+.mgmenu h4 {
+	font-size:18px;
+}
+.mgmenu a {
+	text-decoration: none;
+	color:#ffffff;   
+}
+.mgmenu a:hover {
+	color:#ffcc30;
+}
+.mgmenu a:focus {
+	background: none;
+}
+
+/* Lists */
+
+.mgmenu > li ul,
+.mgmenu > li ul {
+	list-style:square;
+}
+.mgmenu > li ul.no_bullets {
+	list-style:none;
+	padding:0;
+	margin: 0;
+}
+.mgmenu > li ul li {
+	font-size:12px;
+	line-height:22px;
+	position:relative;
+	color:#222222;
+	text-shadow:1px 1px 1px #4c0101;
+	font-weight: normal;
+}
+
+/*  _______________________________________
+
+    MOBILE DEVICES
+    _______________________________________  */
+
+@media only screen and (min-width: 781px) {
+
+	.mgmenu_container {
+		margin-left: 1.3em;
+	}
+	.mgmenu_container .mgmenu > li,
+	.mgmenu_fixed .mgmenu > li,
+	.mgmenu_footer .mgmenu > li {
+		display: block !important;
+	}
+	    .mgmenu_container > .mgmenu > li.mgmenu_button,
+	    .mgmenu_fixed > .mgmenu > li.mgmenu_button,
+	    .mgmenu_footer > .mgmenu > li.mgmenu_button {
+	        display: none !important;
+	    }
+}
+
+
+@media only screen and (max-width: 780px) {
+	.nav {
+		background-image: none !important;
+	}
+	.mgmenu_container,
+	.mgmenu_fixed,
+	.mgmenu_footer {
+		width:100%;
+		height:auto;
+		margin:0;
+		position:relative;
+		left:auto;
+		top:auto;
+		bottom:auto;
+	}
+	.mgmenu_container .mgmenu > li,
+	.mgmenu_fixed .mgmenu > li,
+	.mgmenu_footer .mgmenu > li {
+		float:none;
+		width:auto;
+		border:none;
+		display: none;
+		padding-left: 1.5em;
+	}
+	    .mgmenu_container > .mgmenu > li.mgmenu_button,
+	    .mgmenu_fixed > .mgmenu > li.mgmenu_button,
+	    .mgmenu_footer > .mgmenu > li.mgmenu_button {
+	        display: block;
+	    }
+	.mgmenu > li > span,
+	.mgmenu > li > a {
+		display: block;
+	}
+		.mgmenu > li .mgmenu_drop {
+			background-position:96% 19px;
+		}
+	.mgmenu > li .dropdown_container,
+	.mgmenu > li .dropdown_fullwidth,
+	.mgmenu_footer .mgmenu > li .dropdown_container,
+	.mgmenu_footer .mgmenu > li .dropdown_fullwidth {
+		position:absolute;
+		top:auto;
+		bottom:auto;
+		width: 100%;
+		margin:0 0 0 -1.5em;
+		border-top:none;
+	}
+	.mgmenu li .dropdown_3columns,
+	.mgmenu li .dropdown_4columns,
+	{
+		width: 100%;
+		padding-left:0;
+		padding-right:0;
+	}
+	.mgmenu .col_12 {
+		width:92%;
+		margin-left: 4%;
+		margin-right: 4%;
+		padding: 0;
+		float: left;
+		display: block;
+	}
+	.mgmenu > li ul.no_bullets {
+		margin-left: 1.6em;
+	}
+	.search-form {
+	    margin-bottom: 1em;
+	}
+
+}
